@@ -32,12 +32,12 @@ def selection_sort(unordered_list: list) -> list:
         # loops to comparing elements
         for j in range(i + 1, len(unordered_list)):
 
-            if unordered_list[min_index] < unordered_list[j]:
+            if unordered_list[j] < unordered_list[min_index]:
                 min_index = j
 
-        unordered_list[min_index], unordered_list[j] = (
-            unordered_list[j],
+        unordered_list[i], unordered_list[min_index] = (
             unordered_list[min_index],
+            unordered_list[i],
         )
 
     return unordered_list
